@@ -1,0 +1,13 @@
+import numpy as np
+
+def odd_even_project(numbers):
+  number = np.array(numbers)
+  even_numbers = number[number % 2 == 0]
+  odd_numbers = number[number % 2 == 1]
+  return even_numbers, odd_numbers
+
+
+inputNumber = list(map(int, input("Enter the numbers: ").split()))
+even_numbers, odd_numbers = odd_even_project(inputNumber)
+print("Even numbers:", even_numbers)
+print("Odd numbers:", odd_numbers)
